@@ -1,5 +1,5 @@
 # spring-batch
-spring batch poc application which reads from csv and writes to h2 database
+spring batch poc application which reads from the h2 database and writes to a csv file.
 
 Installation Guides:
   1. Import application as an existing maven project.
@@ -7,11 +7,12 @@ Installation Guides:
   3. Start the application by running it as SpringBootApp.
   
  Once the application is up. 
- A scheduler is scheduled to insert the data into the H2 database after every second.
  
- To see the database and perform queries open the following url:
+ Access the h2-console via following link:
   http://localhost:8080/h2-console
   
- A rest endpoint is also exposed inorder to manually start the batch process, inorder
- to do so open the following url:
+ Once the console is open create a table with name 'USER' with two columns 'id' and 'name'.
+ Insert into the table 'USER' some dummy values.
+ 
+ Once the values are added start the batch using the following rest end points:
   http://localhost:8080/load
